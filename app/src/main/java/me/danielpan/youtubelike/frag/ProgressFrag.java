@@ -1,0 +1,33 @@
+package me.danielpan.youtubelike.frag;
+
+
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import me.danielpan.youtubelike.R;
+
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class ProgressFrag extends Fragment {
+    public static ProgressFrag newInstance() {
+        return new ProgressFrag();
+    }
+
+    public ProgressFrag() {
+        // Required empty public constructor
+    }
+
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_progress, container, false);
+    }
+
+
+}
