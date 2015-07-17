@@ -1,0 +1,80 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="me.danielpan.youtubelike.LoginActivity">
+
+    <TextView
+        android:shadowColor="@color/swipe_refresh_color_scheme_green"
+        android:shadowDx="3"
+        android:shadowDy="4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="@string/title_activity_login"
+        android:textAllCaps="false"
+        android:textColor="@color/swipe_refresh_color_scheme_green_1"
+        android:textSize="25sp" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/text_input_layout_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        app:backgroundTintMode="src_over"
+        app:errorEnabled="true"
+        app:errorTextAppearance="@style/TextAppearance.Design.Error"
+        app:hintTextAppearance="@style/TextAppearance.Design.Hint">
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/app_compat_edit_text_email"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="Email/Phone"
+            android:inputType="text"
+            android:textColor="@color/swipe_refresh_color_scheme_blue"
+            android:textColorHint="@color/swipe_refresh_color_scheme_green"
+            android:textSize="18sp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/text_input_layout_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        app:backgroundTintMode="src_over"
+        app:errorEnabled="true"
+        app:errorTextAppearance="@style/TextAppearance.Design.Error"
+        app:hintTextAppearance="@style/TextAppearance.Design.Hint">
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/app_compat_edit_text_password"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColor="@color/swipe_refresh_color_scheme_blue"
+            android:textColorHint="@color/swipe_refresh_color_scheme_green"
+            android:textSize="18sp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_bg_selector"
+        android:gravity="center"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+</LinearLayout>

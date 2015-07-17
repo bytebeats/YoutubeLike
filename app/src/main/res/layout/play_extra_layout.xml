@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="top|center_horizontal"
+    android:background="@android:color/white"
+    android:gravity="top|center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/play_title"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:gravity="left|center_vertical"
+        android:singleLine="true"
+        android:text="Fat Buck Bunny : fatty belly and stupid brain"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="19sp" />
+
+    <TextView
+        android:id="@+id/play_views"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:gravity="left|center_vertical"
+        android:singleLine="true"
+        android:text="789,234 Views"
+        android:textAllCaps="false"
+        android:textColor="#727172"
+        android:textSize="14sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/play_category_title"
+            android:layout_width="0dp"
+            android:layout_height="18dp"
+            android:layout_weight="2"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:gravity="left|center_vertical"
+            android:singleLine="true"
+            android:text="Category"
+            android:textAllCaps="false"
+            android:textColor="#959696"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/play_category"
+            android:layout_width="0dp"
+            android:layout_height="18dp"
+            android:layout_weight="3"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:gravity="left|center_vertical"
+            android:singleLine="true"
+            android:text="@string/play_category"
+            android:textAllCaps="false"
+            android:textColor="#26b4ab"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/play_license_title"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="2"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:gravity="left|center_vertical"
+            android:singleLine="true"
+            android:text="License"
+            android:textAllCaps="false"
+            android:textColor="#959696"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/play_license"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="3"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:gravity="left|center_vertical"
+            android:singleLine="true"
+            android:text="Standard Youtube License"
+            android:textAllCaps="false"
+            android:textColor="#b4b4b4"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="3dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/play_upvote"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:drawableRight="@drawable/icon_upvote"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:gravity="left|center_vertical"
+            android:singleLine="true"
+            android:text="965"
+            android:textAllCaps="false"
+            android:textColor="#b4b4b4"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/play_downvote"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:drawableRight="@drawable/icon_downvote"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:gravity="left|center_vertical"
+            android:singleLine="true"
+            android:text="190"
+            android:textAllCaps="false"
+            android:textColor="#b4b4b4"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#d4d4d4" />
+
+        <RelativeLayout
+            android:id="@+id/play_poster_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/play_poster_avatar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="7dp"
+                android:src="@mipmap/header"
+                app:border_color="#ffd3d3d3"
+                app:border_width="2dp"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/play_poster_avatar"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/play_poster_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:ellipsize="marquee"
+                    android:gravity="left|bottom"
+                    android:singleLine="true"
+                    android:text="TAPE NBA"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/play_poster_subscribers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:ellipsize="marquee"
+                    android:gravity="left|top"
+                    android:singleLine="true"
+                    android:text="5,897 subscribers"
+                    android:textAllCaps="false"
+                    android:textColor="#b4b4b4"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/play_poster_subscribe"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:drawableLeft="@drawable/icon_recorder"
+                android:gravity="left|center_vertical"
+                android:singleLine="true"
+                android:text="Subscribe"
+                android:textAllCaps="false"
+                android:textColor="#ff0520"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#d4d4d4" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:gravity="left|bottom"
+        android:singleLine="true"
+        android:text="Suggestions"
+        android:textAllCaps="false"
+        android:textColor="#b4b4b4"
+        android:textSize="19sp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

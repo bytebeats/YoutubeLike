@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="home_tab_titles">
+        <item>Home</item>
+        <item>Music</item>
+        <item>Sports</item>
+    </string-array>
+
+    <string-array name="android_ver_titles">
+        <item>Cupcake</item>
+        <item>Donut</item>
+        <item>Eclair</item>
+        <item>Froyo</item>
+        <item>Ginger Bread</item>
+        <item>Honeycomb</item>
+        <item>Ice Cream Sandwich</item>
+        <item>Jelly Bean</item>
+        <item>Kitkat</item>
+        <item>Lollipop</item>
+    </string-array>
+
+    <string-array name="android_api">
+        <item>3</item>
+        <item>4</item>
+        <item>5,6,7</item>
+        <item>8</item>
+        <item>9,10</item>
+        <item>11,12,13</item>
+        <item>14,15,16,17,18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21,22</item>
+    </string-array>
+
+    <string-array name="singers">
+        <item>Tyler Swift</item>
+        <item>Eminam</item>
+        <item>OneRepublic</item>
+        <item>Kelly Clarkson</item>
+        <item>Michael Learns to Rock</item>
+        <item>Selena Gomelz</item>
+        <item>Ania</item>
+        <item>Bruno Mars</item>
+        <item>Beyonce</item>
+        <item>Jessie J</item>
+    </string-array>
+    <string-array name="songs">
+        <item>Sound of Silence</item>
+        <item>Price Tag</item>
+        <item>Sorry</item>
+        <item>Good Time</item>
+        <item>Take a picture</item>
+        <item>Five Hundred miles</item>
+        <item>Love the way you lie</item>
+        <item>Stronger</item>
+        <item>Fairy Tales</item>
+        <item>Fireworks</item>
+        <item>Apologize</item>
+    </string-array>
+    <string-array name="nba_stars">
+        <item>Lebron James</item>
+        <item>Kobe Bryant</item>
+        <item>Anthony Davis</item>
+        <item>Chris Paul</item>
+        <item>Blake Griffin</item>
+        <item>Kevin Durant</item>
+        <item>Stephen Curry</item>
+        <item>Claire Thompson</item>
+        <item>James Harden</item>
+        <item>Cameron Anthony</item>
+        <item>Paul George</item>
+        <item>Kevin Love</item>
+        <item>Kerry Irving</item>
+    </string-array>
+
+    <string-array name="listArray">
+        <item>Headings</item>
+        <item>Headings and Details</item>
+        <item>All Data</item>
+    </string-array>
+
+    <string-array name="listValues">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="settings_items">
+        <item>General</item>
+        <item>Connected TVs</item>
+        <item>Privacy</item>
+        <item>Captions</item>
+        <item>About</item>
+    </string-array>
+</resources>

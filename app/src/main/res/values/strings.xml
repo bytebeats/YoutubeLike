@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">YoutubeLike</string>
+    <string name="app_info">Info Settings</string>
+    <string name="drawer_open_desc">Drawer Open</string>
+    <string name="drawer_close_desc">Drawer Close</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="home_action_search">Search</string>
+    <string name="home_action_settings">Settings</string>
+    <string name="home_action_privacy_policy">Privacy Policy</string>
+    <string name="home_action_help_feedback">Help &#038; Feedback</string>
+    <string name="home_action_sign_out">Sign Out</string>
+
+    <string name="menu_home_sub_header_playlist">Playlists</string>
+    <string name="menu_home_sub_header_subscriptions">Subscriptions</string>
+    <string name="menu_home_sub_header_best">Best of Youtube</string>
+    <string name="menu_home_action_title_music_video">MusicVideo</string>
+    <string name="menu_home_action_title_what_to_watch">What to watch</string>
+    <string name="menu_home_action_title_my_subscriptions">My Subscriptions</string>
+    <string name="menu_home_action_title_popular">Popular on Youtube</string>
+    <string name="menu_home_action_title_music">Music</string>
+    <string name="menu_home_action_title_google_devs">Google Developers</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_version_introduction">Android wiki</string>
+    <string name="title_activity_song_list">Songs</string>
+    <string name="title_activity_nba_brief">NBA</string>
+
+    <string name="android_introduction">Android is a mobile operating system OS based on the Linux kernel and currently developed by Google. With a user interface based on direct manipulation, Android is designed primarily for touchscreen mobile devices such as smartphones and tablet computers, with specialized user interfaces for televisions Android TV, cars Android Auto, and wrist watches Android Wear. The OS uses touch inputs that loosely correspond to real-world actions, like swiping, tapping, pinching, and reverse pinching to manipulate on-screen objects, and a virtual keyboard. Despite being primarily designed for touchscreen input, it has also been used in game consoles, digital cameras, regular PCs, and other electronics. As of 2015, Android has the largest installed base of all operating systems.</string>
+    <string name="nbs_brief" formatted="false">The National Basketball Association NBA is the preeminent mens professional basketball league in North America, and is widely considered to be the premier mens professional basketball league in the world. It has 30 franchised member clubs 29 in the United States and 1 in Canada, and is an active member of USA Basketball USAB, which is recognized by FIBA also known as the International Basketball Federation as the national governing body for basketball in the United States. The NBA is one of the four major North American professional sports leagues. NBA players are the worlds best paid sportsmen, by average annual salary per player. The league was founded in New York City on June 6, 1946, as the Basketball Association of America BAA. The league adopted the name National Basketball Association on August 3, 1949, after merging with its rival National Basketball League NBL. The leagues several international as well as individual team offices are directed out of its head offices located in the Olympic Tower at 645 Fifth Avenue in New York City. NBA Entertainment and NBA TV studios are directed out of offices located in Secaucus, New Jersey.
+    </string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+    <string name="title_activity_register">Sign up</string>
+    <string name="title_activity_play">PlayActivity</string>
+    <string name="play_category">People &#038; Blog</string>
+</resources>

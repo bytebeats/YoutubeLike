@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <gradient
+        android:angle="45"
+        android:type="sweep"
+        android:centerColor="@color/swipe_refresh_color_scheme_green_1"
+        android:endColor="@color/swipe_refresh_color_scheme_blue"
+        android:gradientRadius="3dp"
+        android:startColor="@color/swipe_refresh_color_scheme_red" />
+</shape>
