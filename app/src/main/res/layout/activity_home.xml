@@ -57,7 +57,7 @@
             app:borderWidth="1dp"
             app:elevation="3dp"
             app:fabSize="normal"
-            app:layout_anchor="@+id/home_coordinator_layout"
+            app:layout_anchor="@id/home_view_pager"
             app:layout_anchorGravity="bottom|right|end"
             app:pressedTranslationZ="2dp"
             app:rippleColor="@color/swipe_refresh_color_scheme_green" />

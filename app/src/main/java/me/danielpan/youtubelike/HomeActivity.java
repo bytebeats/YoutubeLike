@@ -82,10 +82,15 @@ public class HomeActivity extends AbsActivity implements NavigationView.OnNaviga
         navigationView = (NavigationView) findViewById(R.id.home_navigation_view);
         toolbar = (Toolbar) findViewById(R.id.toolbar_appcompat);
         fab = (FloatingActionButton) findViewById(R.id.fab_home);
-        //
-        ivAvatar = (ImageView) findViewById(R.id.profile_avatar);
-        tvEmail = (TextView) findViewById(R.id.profile_email);
-        tvName = (TextView) findViewById(R.id.profile_name);
+        //for support lib 23.1.0
+//        ivAvatar = (ImageView) findViewById(R.id.profile_avatar);
+//        tvEmail = (TextView) findViewById(R.id.profile_email);
+//        tvName = (TextView) findViewById(R.id.profile_name);
+        //for support lib 23.1.1 +
+        View headerLayout = navigationView.getHeaderView(0);
+        ivAvatar = (ImageView) headerLayout.findViewById(R.id.profile_avatar);
+        tvEmail = (TextView) headerLayout.findViewById(R.id.profile_email);
+        tvName = (TextView) headerLayout.findViewById(R.id.profile_name);
 
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.drawer_open_desc, R.string.drawer_close_desc) {
             @Override
@@ -117,7 +122,7 @@ public class HomeActivity extends AbsActivity implements NavigationView.OnNaviga
             }
         });
 
-        drawerLayout.setDrawerListener(actionBarDrawerToggle);
+        drawerLayout.addDrawerListener(actionBarDrawerToggle);
         adapter = new ContentAdapter(getSupportFragmentManager(), this);
         if (Build.VERSION_CODES.HONEYCOMB >= Build.VERSION.SDK_INT) {
             viewPager.setPageTransformer(true, new DepthPageTransformer());
@@ -126,7 +131,7 @@ public class HomeActivity extends AbsActivity implements NavigationView.OnNaviga
 //        tabLayout.setTabsFromPagerAdapter(adapter);
 //        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.setupWithViewPager(viewPager);
-        tabLayout.setOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(viewPager) {
+        tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(viewPager) {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 super.onTabSelected(tab);
@@ -143,7 +148,7 @@ public class HomeActivity extends AbsActivity implements NavigationView.OnNaviga
                 super.onTabReselected(tab);
             }
         });
-//        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+//        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
 //            @Override
 //            public void onTabSelected(TabLayout.Tab tab) {
 //                showCenterToast("You selected " + tab.getText().toString());
@@ -174,7 +179,7 @@ public class HomeActivity extends AbsActivity implements NavigationView.OnNaviga
                 }, "Cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-//                        onBackPressed();
+//                        onBackPressed();//No Needs;
                     }
                 });
             }
@@ -188,7 +193,7 @@ public class HomeActivity extends AbsActivity implements NavigationView.OnNaviga
                 ivAvatar.setImageResource(R.mipmap.header);
             }
         } catch (IOException e) {
-            e.printStackTrace();
+//            e.printStackTrace();
             ivAvatar.setImageResource(R.mipmap.header);
         }
         tvName.setOnClickListener(new View.OnClickListener() {
@@ -197,6 +202,7 @@ public class HomeActivity extends AbsActivity implements NavigationView.OnNaviga
                 startActivity(ProfileActivity.class);
             }
         });
+        navigationView.setNavigationItemSelectedListener(this);
     }
 
     @Override
@@ -323,9 +329,11 @@ public class HomeActivity extends AbsActivity implements NavigationView.OnNaviga
     @Override
     public boolean onNavigationItemSelected(MenuItem menuItem) {
         switch (menuItem.getItemId()) {
-            case R.id.action_bar:
+            case R.id.menu_home_action_profile_overlay:
+                startActivity(new Intent(this, OverlayProfileActivity.class));
                 return true;
             default:
+                showCenterToast(menuItem.getTitle().toString());
                 return true;
         }
     }

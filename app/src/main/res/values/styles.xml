@@ -57,5 +57,18 @@
         <item name="colorAccent">@color/app_color_accent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="android:colorPrimary">@color/app_color_primary</item>
+        <item name="android:colorPrimaryDark">@color/app_color_primary_dark</item>
+        <item name="android:colorAccent">@color/app_color_accent</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="OverlayParallaxTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/app_color_primary</item>
+        <item name="colorPrimaryDark">@color/app_color_primary_dark</item>
+        <item name="colorAccent">@color/app_color_accent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 </resources>

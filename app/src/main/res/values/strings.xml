@@ -15,6 +15,7 @@
     <string name="menu_home_sub_header_subscriptions">Subscriptions</string>
     <string name="menu_home_sub_header_best">Best of Youtube</string>
     <string name="menu_home_action_title_music_video">MusicVideo</string>
+    <string name="menu_home_action_title_profile_overlay">Overlay Profile</string>
     <string name="menu_home_action_title_what_to_watch">What to watch</string>
     <string name="menu_home_action_title_my_subscriptions">My Subscriptions</string>
     <string name="menu_home_action_title_popular">Popular on Youtube</string>
@@ -35,6 +36,7 @@
     </string>
     <string name="title_activity_login">Sign in</string>
     <string name="title_activity_profile">ProfileActivity</string>
+    <string name="title_activity_overlay_profile">OverlayProfileActivity</string>
     <string name="title_activity_register">Sign up</string>
     <string name="title_activity_play">PlayActivity</string>
     <string name="play_category">People &#038; Blog</string>

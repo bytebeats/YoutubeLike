@@ -66,7 +66,7 @@ public class NbaStarsFrag extends Fragment {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         sports = getResources().getStringArray(R.array.nba_stars);
         recyclerView.setAdapter(new CstmAdapter(getActivity(), sports, CstmAdapter.TYPE_SPORT));
-        recyclerView.setOnScrollListener(new RecyclerView.OnScrollListener() {
+        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
                 super.onScrollStateChanged(recyclerView, newState);

@@ -1,13 +1,9 @@
 package me.danielpan.youtubelike;
 
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Color;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.v7.app.ActionBar;
-import android.support.v7.graphics.Palette;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -20,7 +16,7 @@ import android.widget.ImageView;
 import me.danielpan.youtubelike.abs.AbsActivity;
 import me.danielpan.youtubelike.adapter.CstmAdapter;
 
-public class ProfileActivity extends AbsActivity {
+public class OverlayProfileActivity extends AbsActivity {
     private CoordinatorLayout coordinatorLayout;
     private CollapsingToolbarLayout collapsingToolbarLayout;
     private AppBarLayout appBarLayout;
@@ -32,7 +28,7 @@ public class ProfileActivity extends AbsActivity {
 
     @Override
     protected void inflateContentView() {
-        setContentView(R.layout.activity_profile);
+        setContentView(R.layout.activity_overlay_profile);
     }
 
     @Override
@@ -61,21 +57,10 @@ public class ProfileActivity extends AbsActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setHomeAsUpIndicator(R.drawable.abc_ic_ab_back_mtrl_am_alpha);
 
-        collapsingToolbarLayout.setTitle(getString(R.string.title_activity_profile));
-        collapsingToolbarLayout.setSoundEffectsEnabled(true);
-        collapsingToolbarLayout.setCollapsedTitleTextColor(Color.GREEN);
-        collapsingToolbarLayout.setExpandedTitleColor(Color.BLUE);
-        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.profile_bg);
-        Palette.from(bitmap).generate(new Palette.PaletteAsyncListener() {
-            @Override
-            public void onGenerated(Palette palette) {
-                int contentMutedColor = palette.getMutedColor(getResources().getColor(R.color.app_color_primary));
-                int statusbarMutedColor = palette.getMutedColor(getResources().getColor(R.color.app_color_primary_dark));
-
-                collapsingToolbarLayout.setContentScrimColor(contentMutedColor);
-                collapsingToolbarLayout.setStatusBarScrimColor(statusbarMutedColor);
-            }
-        });
+//        collapsingToolbarLayout.setTitle(getString(R.string.title_activity_profile));
+//        collapsingToolbarLayout.setSoundEffectsEnabled(true);
+//        collapsingToolbarLayout.setCollapsedTitleTextColor(Color.GREEN);
+//        collapsingToolbarLayout.setExpandedTitleColor(Color.BLUE);
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(layoutManager);

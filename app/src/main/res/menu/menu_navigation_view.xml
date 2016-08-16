@@ -2,6 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group>
         <item
+            android:id="@+id/menu_home_action_profile_overlay"
+            android:icon="@drawable/menu_home_action_icon_profile_overlay"
+            android:title="@string/menu_home_action_title_profile_overlay" />
+        <item
             android:id="@+id/menu_home_action_what_to_watch"
             android:icon="@drawable/menu_home_action_icon_what_to_watch"
             android:title="@string/menu_home_action_title_what_to_watch" />
