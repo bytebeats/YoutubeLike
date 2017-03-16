@@ -9,17 +9,22 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 import me.danielpan.youtubelike.NbaBriefActivity;
 import me.danielpan.youtubelike.R;
 import me.danielpan.youtubelike.SongListActivity;
 import me.danielpan.youtubelike.VersionIntroductionActivity;
+import me.danielpan.youtubelike.abs.DragAndSwipeHelper;
 
 /**
  * Created by it-od-m-2572 on 15/6/9.
  */
-public class CstmAdapter extends RecyclerView.Adapter<CstmAdapter.ViewHolder> {
+public class CstmAdapter extends RecyclerView.Adapter<CstmAdapter.ViewHolder> implements DragAndSwipeHelper {
     private Context context;
-    private String[] titles;
+    private List<String> titleList = new ArrayList<>();
     private int type;
     public static final int TYPE_VERSION = 0X000;
     public static final int TYPE_MUSIC = 0X001;
@@ -28,7 +33,11 @@ public class CstmAdapter extends RecyclerView.Adapter<CstmAdapter.ViewHolder> {
     public CstmAdapter(Context ctxt, String[] resArray, int type) {
         super();
         context = ctxt;
-        titles = resArray;
+        if (resArray != null) {
+            for (String title : resArray) {
+                titleList.add(title);
+            }
+        }
         this.type = type;
     }
 
@@ -39,12 +48,12 @@ public class CstmAdapter extends RecyclerView.Adapter<CstmAdapter.ViewHolder> {
 
     @Override
     public int getItemCount() {
-        return titles.length;
+        return titleList.size();
     }
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        holder.textView.setText(titles[position]);
+        holder.textView.setText(titleList.get(position));
         holder.textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -72,6 +81,26 @@ public class CstmAdapter extends RecyclerView.Adapter<CstmAdapter.ViewHolder> {
         ViewHolder holder = new ViewHolder(itemView);
         itemView.setTag(holder);
         return holder;
+    }
+
+    @Override
+    public void onDraggedAndDropped(int fromPosition, int toPosition) {
+        if (fromPosition > toPosition) {
+            for (int i = fromPosition; i < toPosition; i++) {
+                Collections.swap(titleList, i, i - 1);
+            }
+        } else {
+            for (int i = toPosition; i < fromPosition; i++) {
+                Collections.swap(titleList, i, i + 1);
+            }
+        }
+        notifyItemMoved(fromPosition, toPosition);
+    }
+
+    @Override
+    public void onSwiped(int position) {
+        titleList.remove(position);
+        notifyItemRemoved(position);
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

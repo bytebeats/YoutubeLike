@@ -25,15 +25,15 @@
             app:collapsedTitleGravity="left|center_vertical"
             app:collapsedTitleTextAppearance="@style/ThemeOverlay.AppCompat.Dark"
             app:contentScrim="?attr/colorPrimary"
-            app:expandedTitleGravity="center"
-            app:expandedTitleMarginBottom="32dp"
-            app:expandedTitleMarginEnd="64dp"
-            app:expandedTitleMarginStart="48dp"
+            app:expandedTitleGravity="left"
             app:expandedTitleTextAppearance="@style/ThemeOverlay.AppCompat.Light"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:paddingStart="0dp"
             app:statusBarScrim="?attr/colorAccent"
-            app:titleEnabled="true">
+            app:titleEnabled="false">
+            <!--app:expandedTitleMarginEnd="64dp"-->
+            <!--app:expandedTitleMarginBottom="32dp"-->
+            <!--app:expandedTitleMarginStart="48dp"-->
 
             <ImageView
                 android:id="@+id/profile_bg"

@@ -9,13 +9,15 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import me.danielpan.youtubelike.adapter.CstmAdapter;
 import me.danielpan.youtubelike.R;
+import me.danielpan.youtubelike.adapter.CstmAdapter;
+import me.danielpan.youtubelike.adapter.ItemTouchHelperCallback;
 import me.danielpan.youtubelike.util.ColorGenerator;
 
 /**
@@ -65,7 +67,8 @@ public class MusicFrag extends Fragment {
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         singers = getResources().getStringArray(R.array.singers);
-        recyclerView.setAdapter(new CstmAdapter(getActivity(), singers, CstmAdapter.TYPE_MUSIC));
+        CstmAdapter adapter = new CstmAdapter(getActivity(), singers, CstmAdapter.TYPE_MUSIC);
+        recyclerView.setAdapter(adapter);
         recyclerView.setOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
@@ -86,6 +89,9 @@ public class MusicFrag extends Fragment {
                 }
             }
         });
+        ItemTouchHelper.Callback callback = new ItemTouchHelperCallback(adapter);
+        ItemTouchHelper helper = new ItemTouchHelper(callback);
+        helper.attachToRecyclerView(recyclerView);
         return rootView;
     }
 
